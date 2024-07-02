@@ -1,0 +1,283 @@
+/**********************************************************
+* RESET from Goldilocks V0.1
+* http://www.goldilocksapproach.com
+**********************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+main, img,
+textarea, input, button, form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size:100%;
+	font: inherit;
+	line-height: inherit;
+	vertical-align: baseline;
+	color: inherit;
+	box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+	box-sizing: border-box;
+}
+/**********************************************************
+* TYPOGRAPHY adapted from Goldilocks and Typeplate
+* Typeplate 2.1.0 https://github.com/typeplate/starter-kit
+* Creative Common Attribution 3.0
+* https://github.com/typeplate/starter-kit/blob/master/license.txt
+*
+* Take care of vertical rythm:
+* http://alistapart.com/article/settingtypeontheweb
+*  - Define the default baseline.
+*  - Vertical margins are multiple of the baseline and expressed in rem.
+*  - Local line heights are multiples of the baseline and expressed in em.
+*  - Line height in em = x * baseline in px / font-size in px,
+*  - Font size in em = size in px / basefont in px.
+**********************************************************/
+html {
+	text-rendering: optimizeLegibility; /* ligature and kerning */
+	font-family: "Helvetica Neue";
+	font-size: 120%; /* 16px */
+	line-height: 1.5em; /* 24px */
+}
+body {line-height: 1.5rem;}
+
+h1 { font-size: 1.8rem; line-height: 3rem}
+/*h1 { font-size: 2.4rem; line-height: 3rem;} */
+h2 { font-size: 1.8rem; line-height: 3rem;}
+h3 { font-size: 1.5rem; line-height: 1.5rem;}
+footer p {font-size: .8rem;}
+pre, code {font-family: monospace;}
+i {font-style: italic;}
+b {font-weight: bold;}
+
+/**********************************************************
+* GRID
+**********************************************************/
+html, body, main {
+	width: 100%;
+}
+header {
+	top: 0;
+	width: 100%;
+	padding: .75rem;
+}
+h1, .subtitle {
+	display: inline-block;
+	padding-left: 1.5rem;
+}
+section {
+	width: 90%;
+	max-width: 90%;
+	margin: 1.5rem auto 0 auto;
+}
+input, button {
+	width: 7.5rem;
+}
+footer {
+	text-align: center;
+	width: 25rem;
+	margin: 3rem auto;
+}
+
+
+
+/**********************************************************
+* Paragraphs layout
+**********************************************************/
+h2, h3, h4, th {font-weight: bold;}
+h2 {margin-top: 3rem; margin-bottom: 1.5rem; text-align: center;}
+h3 {margin-top: 1.5rem; margin-bottom: 1.5rem;}
+h4 {margin-top: 1.5rem; margin-bottom: 0;}
+/* h2:before {content: "\2014 ";} h2:after {content: " \2014";} */
+p, ul, blockquote {text-align: justify;}
+blockquote {padding-left: 1.5rem;}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 1rem;
+}
+ul > li:before {
+	display: inline-block;
+	content: "\2013 "; /* endash */
+	width: 1rem;
+	margin-left: -1rem;
+}
+table {
+    overflow-x: auto;
+	width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem auto;
+    }
+
+th, td {
+    padding: .75rem;
+    text-align: left;
+    }
+td input[type='text'] {
+	width: 100%;
+}
+
+/**********************************************************
+ * forms
+ * *******************************************************/
+.form {
+	display: grid;
+	grid-template-columns: 12rem 16rem;
+	width: 28rem;
+	margin: 3rem auto;
+}
+.form label, .form input, .form select,
+.form .etiquettes {
+	padding: .5rem;
+	margin: .75rem;
+	width: 100%;
+}
+.full {
+	grid-column: 1 / span 2;
+	margin: .75rem;
+}
+.checkbox {
+	border: 1px solid;
+	border-radius: 3px;
+	padding: .5rem;
+	margin: .75rem;
+}
+input[type="checkbox"] {
+	display: inline-block;
+	margin-right: .5rem;
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	padding: 0;
+	margin: 0;
+	vertical-align: sub;
+}
+input[type='file'] {
+	border: none;
+	padding: .5rem;
+	margin: .75rem;
+	width: 100%;
+}
+
+textarea[name='message'] {
+	grid-column: 1 / span 2;
+	width: 28rem;
+	height: 30rem;
+	padding: .5rem;
+}
+textarea[name='note'] {
+	height: 7.5rem;
+	padding: .5rem;
+}
+
+a.button, .inline input {
+	border: 1px solid;
+	border-radius: 3px;
+	padding: .5rem;
+	text-decoration: none;
+	display: inline-block;
+	margin: .25rem;
+}
+.inline {
+	display: inline-block;
+}
+.inline input[type='text'] {
+	width: 15rem;
+}
+.form .button {
+	margin: .75rem;
+}
+
+
+
+/**********************************************************
+* COLORS handmade, WTFPL license.
+* BLACK: 272727
+* DARK: 484848
+* GREY1: 626262
+* GREY2: A1A1A1
+* CLEAR: DADADA
+* WHITE: EFEFEF
+* Rose: d31b5b
+* Violet: 6b1d60
+* Bleu_nuit: 25314C
+* Bleu_vert: 244G54
+* Cyan: 079187
+* bleu_ciel: 62B3B7
+* jaune: ffda40
+* orange: dda831
+* saumon: e96e4C
+* rose: e8b4af
+* gris_clair: b3b3b3
+* gris_foncé: 333333
+**********************************************************/
+body {
+	background-color: #FFFFFF;
+	color: #484848;
+}
+header {
+	background-color: #272727;
+	color: #D3D3D3;
+}
+input, button, .button {
+	border-radius: 3px;
+	border: 1px solid;
+	background-color: white;
+	color: #626262;
+}
+.form input[type='submit'] {
+	color: #D3D3D3;
+	background-color: #272727;
+	border: 1px solid #272727;
+}
+input[type='text'], input[type='password'], textarea {
+	background-color: #FFFFFF;
+	color: #626262;
+	border:1px solid  #D3D3D3;
+}
+input[type="button"]:hover, input[type="submit"]:hover,
+button:hover, .button:hover {
+	background-color: transparent;
+	border: 1px solid;
+	color: #272727;
+}
+a.button, a.button:hover, a.etiquette:hover {
+	background-color: transparent;
+}
+.checkbox {
+	border: 1px solid #DADADA;
+}
+header a {
+ 	color: #626262;
+	text-decoration: none;
+}
+a:hover {
+	color: #272727;
+	background-color: #D3D3D3;
+}
+th, td {
+	border-bottom: 1px solid #D3D3D3;
+}
+
+.serveur_indisponible {color: #eb3b5a;} /* rouge */
+.erreur_de_connection {color: #eb3b5a;} /* rouge */
+.envoi_interrompu {color: #eb3b5a;} /* rouge */
+.brouillon {color: #4b6584;}
+.en_attente, .erreur {color: #fd9644;} /* orange */
+.envoi_en_cours {color: #fd9644;} /* orange */
+.envoi_partiel {color: #eb3b5a;} /* rouge */
+.envoi_complet {color: #20bf6b;}  /* vert */

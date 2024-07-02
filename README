@@ -1,0 +1,37 @@
+### Sociétaires
+
+Système de suivi des sociétaires d'une société coopérative.
+
+### Présentation
+
+J'ai participé à une société coopérative d'intérêt collectif
+réunissant plus de 200 sociétaires. Nous avons rapidement constaté
+le besoin d'un outil dédié au suivi de ces nombreux sociétaires,
+répondant aux attentes suivantes:
+- utilisable par plusieurs personnes,
+- suivi des entrées et sorties des sociétaires,
+- suivi des augmentations de capital et demande de remboursement de parts sociales,
+- conservation et affichage de l'historique de l'évolution du sociétariat,
+- envoi de courriels en masse aux sociétaires,
+- production automatique des listes de sociétaires pour les assemblées générales.
+
+L'application ici présente offre une réponse basique, mais fonctionnelle
+et gratuite, à ces besoins, si tant est que vous soyez à même de
+modifier les sources. En particulier, les catégories de sociétaires
+ainsi que les dates de fin d'exercice comptable sont codées en dur
+dans l'application.
+
+D'une manière générale, vous préférerez utiliser une solution commerciale,
+telle qu'[Eziscop](https://www.eziscop.fr).
+
+### installation
+
+Téléchargez le fichier bottle.py: https://github.com/bottlepy/bottle
+
+Pour utilisation sur un serveur apache CGI, éditez le makefile et lancez
+`make install`, ou copiez manuellement les dossiers views, assets, scripts
+ainsi que les fichiers index.cgi, bottle.py, htaccess sur votre serveur.
+
+### Licence
+
+Licence ISC.

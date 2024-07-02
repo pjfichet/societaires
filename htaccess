@@ -1,0 +1,56 @@
+Options -Indexes
+
+<FilesMatch "\.sqlite$">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+<Files "\.htaccess">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "\.py">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "\.pickle">
+  Order Allow,Deny
+  Deny from all
+</Files>
+
+<Files "assets">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files "views">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files "scripts">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files "fichiers">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files "data">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files "old">
+	Order Allow,Deny
+	Deny from all
+</Files>
+
+<Files "__pycache__">
+	Order Allow,Deny
+	Deny from all
+</Files>

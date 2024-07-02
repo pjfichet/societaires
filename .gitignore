@@ -1,0 +1,10 @@
+data/*
+__pycache__
+bottle.py
+icu.c
+icu.so
+secret.mk
+migrate.py
+todo
+index.cgi
+backup
